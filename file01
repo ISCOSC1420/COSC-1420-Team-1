@@ -1,0 +1,7 @@
+#include <stdio.h>
+#define TAX .1025
+
+int main(){
+
+
+}
