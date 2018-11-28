@@ -11,13 +11,14 @@ void printReceipt(int choice, int numOfBags, int seatNumber);
 
 	int main(void) {
 
-	int choice;			 // Condition of switch statement; 1, 2, or 3
+	int choice;	         // Condition of switch statement; 1, 2, or 3
 	int seats[SIZE];	 // Array to store the seat number of the customer
 
 	// Initialize all seats to 0 to show that no seats are taken at this time
 	for (size_t i = 0; i < SIZE; i++) {
 		seats[i] = 0;
 	}
+	
 } // end main
 
 // Assign seat of passenger to first, business or economy class. If all of the seats
