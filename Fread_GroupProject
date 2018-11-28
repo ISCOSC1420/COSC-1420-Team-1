@@ -1,0 +1,36 @@
+// Filename GroupProject.c
+// Written by Justin Fread
+// Written on 11/27/18
+
+#include <stdio.h>
+#define TAX 0.1025
+#define SIZE 30
+
+void assignSeat(int seats[], int choice);
+void printReceipt(int choice, int numOfBags, int seatNumber);
+
+	int main(void) {
+
+	int choice;			 // Condition of switch statement; 1, 2, or 3
+	int seats[SIZE];	 // Array to store the seat number of the customer
+
+	// Initialize all seats to 0 to show that no seats are taken at this time
+	for (size_t i = 0; i < SIZE; i++) {
+		seats[i] = 0;
+	}
+} // end main
+
+// Assign seat of passenger to first, business or economy class. If all of the seats
+// are taken for a particular class, offer the customer a seat in another class 
+// or the option to wait 3 hours until the next flight 
+void assignSeat(int seats[], int choice) {
+
+	// Call function printReceipt
+	printReceipt(choice, 1, number);
+}
+
+// Print receipt including seat number, price for class chosen, price for baggage,
+// and tax
+void printReceipt(int choice, int numOfBags, int seatNumber) {
+	
+}
