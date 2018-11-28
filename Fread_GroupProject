@@ -7,7 +7,7 @@
 #define SIZE 30
 
 void assignSeat(int seats[], int choice);
-void printReceipt(int choice, int numOfBags, int seatNumber);
+void printReceipt(int choice, int seatNumber);
 
 	int main(void) {
 
@@ -27,11 +27,11 @@ void printReceipt(int choice, int numOfBags, int seatNumber);
 void assignSeat(int seats[], int choice) {
 
 	// Call function printReceipt
-	printReceipt(choice, 1, number);
+	printReceipt(choice, seatNumber);
 }
 
 // Print receipt including seat number, price for class chosen, price for baggage,
 // and tax
-void printReceipt(int choice, int numOfBags, int seatNumber) {
+void printReceipt(int choice, int seatNumber) {
 	
 }
