@@ -1,0 +1,25 @@
+//Include all necessary libraries
+#include <stdio.h>
+
+//Drive the program
+int main()
+{
+	//Declare local variables
+	int seats[30] = {};
+	int customerSeats[30] = {};
+	float total = 0;
+	int counter = 0;
+	int choice;
+	int bags;
+	float bagsCost;
+	char response;
+	int flag;
+
+	do
+	{
+
+		printf("Please type 1 for \"first class\"\n");
+		printf("Please type 2 for \"business class\"\n");
+		printf("Please type 3 for \"economy class\"\n");
+		printf("Please type 0 to \"exit\"\n");
+		scanf("%d", &choice);
