@@ -83,13 +83,16 @@ customerSeats[x];
 printf("Please enter the amount of bags you will have with you");
 scanf("%d", &bag);
 if (bag >= 1) {
+
 bagsCost = (bag * 5.75) + price;
 }
+
 purchase = bagsCost + price ;
 salesTax = TAX * purchase ;
 total = salesTax + purchase;
 counter += counter ;
 break;
+
 }// end of switch 
 
 }// end of function
