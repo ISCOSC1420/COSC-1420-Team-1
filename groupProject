@@ -2,7 +2,9 @@
 #include <stdio.h>
 #define SIZE 30 
 #define TAX .1025
-
+#define PRICE1 325
+#define PRICE2 275
+#define PRICE3 200
 //Drive the program
 int main()
 {
@@ -36,7 +38,7 @@ switch (choice) {
 case 1:
 printf("You have picked first class\n");
 
-price = 325.00;
+PRICE1 = price;
 for (i = 0; i < firstSeats[i]; ++i){
 customerSeats[x];
 }
@@ -56,7 +58,7 @@ break;
 case 2:
 printf("You have picked business class\n");
 
-price = 275.00;
+PRICE2 = price;
 for (i = 0; i < buisSeats[i]; ++i){
 customerSeats[x];
 }
@@ -74,7 +76,7 @@ break;
 case 3:
 printf("You have picked economy class\n");
 
-price = 200.00;
+PRICE3 = price;
 for (i = 0; i < econSeats[i]; ++i){
 customerSeats[x];
 }
