@@ -16,7 +16,7 @@ int main()
 	//char response;
 //	int flag;
 	float salesTax = 0;
-
+	int price;
 
 		printf("Please type 1 for \"first class\"\n");
 		printf("Please type 2 for \"business class\"\n");
@@ -31,16 +31,16 @@ switch (choice) {
 case 1:
 printf("You have picked first class\n");
 
-tickprice = 325.00;
+price = 325.00;
 for (i = 0; i < seats[i]; ++i){
 customerSeats[x];
 }
 printf("Please enter the amount of bags you will have with you");
 scanf("%d", &bag);
 if (bag > 1) {
-bagsCost = (bag * 5.75) + tickprice;
+bagsCost = (bag * 5.75) + price;
 }
-purchase = baggage + tickprice ;
+purchase = baggage + price ;
 salesTax = TAX * purchase ;
 total = salesTax + purchase;
 
@@ -58,9 +58,9 @@ customerSeats[x];
 printf("Please enter the amount of bags you will have with you");
 scanf("%d", &bag);
 if (bag > 1) {
-bagsCost = (bag * 5.75) + tickprice;
+bagsCost = (bag * 5.75) + price;
 }
-purchase = baggage + tickprice ;
+purchase = baggage + price ;
 salesTax = TAX * purchase ;
 total = salesTax + purchase;
 counter += counter ;
@@ -69,7 +69,7 @@ break;
 case 3:
 printf("You have picked economy class\n");
 
-tickprice = 200.00;
+price = 200.00;
 for (i = 0; i < seats[i]; ++i){
 customerSeats[x];
 }
@@ -78,7 +78,7 @@ scanf("%d", &bag);
 if (bag > 1) {
 bagsCost = (bag * 5.75) + tickprice;
 }
-purchase = baggage + tickprice ;
+purchase = baggage + price ;
 salesTax = TAX * purchase ;
 total = salesTax + purchase;
 counter += counter ;
