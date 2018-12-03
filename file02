@@ -14,12 +14,63 @@ int main()
 	float bagsCost;
 	char response;
 	int flag;
+	
 
-	do
-	{
 
 		printf("Please type 1 for \"first class\"\n");
 		printf("Please type 2 for \"business class\"\n");
 		printf("Please type 3 for \"economy class\"\n");
 		printf("Please type 0 to \"exit\"\n");
 		scanf("%d", &choice);
+printf("Please enter the class you would like to sit in");
+scanf("%d", &choice);
+
+while (choice != 0) {
+switch (choice) {
+case 1:
+printf("You have picked first class\n");
+
+tickprice = 325.00;
+
+printf("Please enter the amount of bags you will have with you");
+scanf("%d", &bag);
+if (bag > 1) {
+baggage = (bag * 5.75) + tickprice;
+}
+total = baggage + tickprice ;
+counter += counter ;
+break;
+
+case 2:
+printf("You have picked business class\n");
+
+tickprice = 275.00;
+
+printf("Please enter the amount of bags you will have with you");
+scanf("%d", &bag);
+if (bag > 1) {
+baggage = (bag * 5.75) + tickprice;
+}
+total = baggage + tickprice ;
+counter += counter ;
+break;
+
+case 3:
+printf("You have picked economy class\n");
+
+tickprice = 200.00;
+
+printf("Please enter the amount of bags you will have with you");
+scanf("%d", &bag);
+if (bag > 1) {
+baggage = (bag * 5.75) + tickprice;
+}
+total = baggage + tickprice ;
+counter += counter ;
+break;
+}\\ end of switch 
+
+
+}// end of function
+
+
