@@ -7,8 +7,10 @@
 int main()
 {
 	//Declare local variables
-	int seats[SIZE] = {};
-	int customerSeats[SIZE] = {};
+	int firstSeats[6] = {1, 2, 3, 4, 5, 6};
+	int buisSeats[14] = {7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+	int econSeats[10] = {21, 22, 23, 24, 25, 26, 27, 28, 29, 30}; 
+	int customerSeats[SIZE] = {0};
 	float total = 0;
 	int counter = 0;
 	int choice;
@@ -17,12 +19,15 @@ int main()
 //	int flag;
 	float salesTax = 0;
 	int price;
+	int i;
+	int x;
+	int bag ;
+	float purchase = 0;
 
 		printf("Please type 1 for \"first class\"\n");
 		printf("Please type 2 for \"business class\"\n");
 		printf("Please type 3 for \"economy class\"\n");
 		printf("Please type 0 to \"exit\"\n");
-		scanf("%d", &choice);
 printf("Please enter the class you would like to sit in");
 scanf("%d", &choice);
 
@@ -32,15 +37,15 @@ case 1:
 printf("You have picked first class\n");
 
 price = 325.00;
-for (i = 0; i < seats[i]; ++i){
+for (i = 0; i < firstSeats[i]; ++i){
 customerSeats[x];
 }
 printf("Please enter the amount of bags you will have with you");
 scanf("%d", &bag);
-if (bag > 1) {
+if (bag >= 1) {
 bagsCost = (bag * 5.75) + price;
 }
-purchase = baggage + price ;
+purchase = bagsCost + price ;
 salesTax = TAX * purchase ;
 total = salesTax + purchase;
 
@@ -51,16 +56,16 @@ break;
 case 2:
 printf("You have picked business class\n");
 
-tickprice = 275.00;
-for (i = 0; i < seats[i]; ++i){
+price = 275.00;
+for (i = 0; i < buisSeats[i]; ++i){
 customerSeats[x];
 }
 printf("Please enter the amount of bags you will have with you");
 scanf("%d", &bag);
-if (bag > 1) {
+if (bag >= 1) {
 bagsCost = (bag * 5.75) + price;
 }
-purchase = baggage + price ;
+purchase = bagsCost + price ;
 salesTax = TAX * purchase ;
 total = salesTax + purchase;
 counter += counter ;
@@ -70,21 +75,19 @@ case 3:
 printf("You have picked economy class\n");
 
 price = 200.00;
-for (i = 0; i < seats[i]; ++i){
+for (i = 0; i < econSeats[i]; ++i){
 customerSeats[x];
 }
 printf("Please enter the amount of bags you will have with you");
 scanf("%d", &bag);
-if (bag > 1) {
-bagsCost = (bag * 5.75) + tickprice;
+if (bag >= 1) {
+bagsCost = (bag * 5.75) + price;
 }
-purchase = baggage + price ;
+purchase = bagsCost + price ;
 salesTax = TAX * purchase ;
 total = salesTax + purchase;
 counter += counter ;
 break;
-}\\ end of switch 
+}// end of switch 
 
-printf("Please enter the class you would like to sit in");
-scanf("%d", &choice);
 }// end of function
