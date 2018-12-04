@@ -1,0 +1,16 @@
+case 3:
+			{
+				for(int i = 20; i < 30; i++)
+				{
+					if(seats[i] == 0)
+					{
+						seats[i] = 1;
+						customerSeats[counter] = i;
+						printf("\n\nSeat %d assigned.\n", i + 1);
+						break;
+					}
+					
+					if(i == 29)
+					{
+						printf("\nNext flight leaves in 3 hours.\n");
+						choice = 0;
