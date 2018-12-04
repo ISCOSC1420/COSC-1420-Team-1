@@ -1,0 +1,136 @@
+//Include all necessary libraries
+#include <stdio.h>
+
+//Drive the program
+int main()
+{
+	//Declare local variables
+	int seats[30] = {};
+	int customerSeats[30] = {};
+	float total = 0;
+	int counter = 0;
+	int choice;
+	int bags;
+	float bagsCost;
+	char response;
+	int flag;
+
+	do
+	{
+
+		printf("Please type 1 for \"first class\"\n");
+		printf("Please type 2 for \"business class\"\n");
+		printf("Please type 3 for \"economy class\"\n");
+		printf("Please type 0 to \"exit\"\n");
+		scanf("%d", &choice);
+
+		switch(choice)
+		{
+			case 1:
+			{
+				flag = 0;
+				for(int i = 0; i < 6; i++)
+				{
+					if(seats[i] == 0)
+					{
+						seats[i] = 1;
+						customerSeats[counter] = i;
+						printf("\n\nSeat %d assigned.\n", i + 1);
+						break;
+					}
+					if(i == 5)
+					{
+						printf("\nFirst class is full. Would you like to sit in Business Class (Y or N)? ");
+						scanf("%s", &response);
+
+						if(response == 'Y' || response == 'y')
+						{
+							flag = 1;
+						}
+					}
+				}
+				if(flag == 0)
+				{
+					break;
+				}
+			}
+			case 2:
+			{
+				flag = 0;
+				for(int i = 6; i < 20; i++)
+				{
+					if(seats[i] == 0)
+					{
+						seats[i] = 1;
+						customerSeats[counter] = i;
+						printf("\n\nSeat %d assigned.\n", i + 1);
+						break;
+					}
+					if(i == 19)
+					{
+						printf("\nBusiness class is full. Would you like to sit in Economy Class (Y or N)? ");
+						scanf("%s", &response);
+
+						if(response == 'Y' || response == 'y')
+						{
+							flag = 1;
+						}
+					}
+				}
+				if(flag == 0)
+				{
+					break;
+				}
+			}
+			case 3:
+			{
+				for(int i = 20; i < 30; i++)
+				{
+					if(seats[i] == 0)
+					{
+						seats[i] = 1;
+						customerSeats[counter] = i;
+						printf("\n\nSeat %d assigned.\n", i + 1);
+						break;
+					}
+					
+					if(i == 29)
+					{
+						printf("\nNext flight leaves in 3 hours.\n");
+						choice = 0;
+					}
+				}
+			}
+		}
+		counter++;
+	}while(choice != 0);
+
+	printf("How many bags are you checking? ");
+	scanf("%d", &bags);
+
+	bagsCost = 0;
+	if(bags > 1)
+	{
+		bagsCost = (bags - 1) * 5.75;
+		total += bagsCost;
+	}
+
+	printf("Receipt\n");
+	for(int i = 0; i < counter && i < 30; i++)
+	{
+
+		printf("Seat: %d. Class: ", customerSeats[i] + 1);
+		if(customerSeats[i] < 6)
+		{
+			printf("First. Price: $325.\n");
+			total += 325;
+		}
+		else if(customerSeats[i] > 5 && customerSeats[i] < 20)
+		{
+			printf("Business. Price: $275.\n");
+			total += 275;
+		}
+		else
+		{
+			printf("Economy. Price: $200.\n");
+			total += 200;
